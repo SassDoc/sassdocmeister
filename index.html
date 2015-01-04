@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SassDocMeister</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/codemirror.css" rel="stylesheet">
+  <link href="css/monokai.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper" role="main">
+    <section class="half">
+      <textarea id="sass" class="textearea" autofocus>/// Returns the specificity map or value of given simple/complex/multiple selector(s).
+/// @access public
+/// @param {List | String} $initial-selector - selector returned by '&amp;'
+/// @param {Bool} $integer - output specificity as integer? (default: false)
+/// @return {Map | Number} specificity map or specificity value represented as integer
+@function specificity($selector, $integer) {}
+</textarea>
+      <header class="header">Sass code</header>
+    </section>
+    <section class="half">
+      <textarea id="json" class="textearea" readonly></textarea>
+      <header class="header">JSON structure</header>
+    </section>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
