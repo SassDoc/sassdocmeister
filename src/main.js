@@ -1,9 +1,10 @@
 var Parser = require('sassdoc').Parser;
+var Environment = require('sassdoc').Environment;
 var CodeMirror = require('codemirror');
 require('codemirror/mode/css/css');
 require('codemirror/mode/javascript/javascript');
 
-var parser = new Parser();
+var parser = new Parser(new Environment(console));
 
 var sassNode = document.querySelector('#sass');
 var jsonNode = document.querySelector('#json');
