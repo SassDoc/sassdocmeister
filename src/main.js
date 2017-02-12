@@ -1,13 +1,13 @@
-var Parser = require('sassdoc').Parser;
-var Environment = require('sassdoc').Environment;
-var CodeMirror = require('codemirror');
-require('codemirror/mode/css/css');
-require('codemirror/mode/javascript/javascript');
+var Parser = require('sassdoc').Parser
+var Environment = require('sassdoc').Environment
+var CodeMirror = require('codemirror')
+require('codemirror/mode/css/css')
+require('codemirror/mode/javascript/javascript')
 
-var parser = new Parser(new Environment(console));
+var parser = new Parser(new Environment(console))
 
-var sassNode = document.querySelector('#sass');
-var jsonNode = document.querySelector('#json');
+var sassNode = document.querySelector('#sass')
+var jsonNode = document.querySelector('#json')
 
 var convert = function () {
   JSONCodeMirror.setValue(
@@ -18,25 +18,25 @@ var convert = function () {
       null,
       2
     )
-  );
-};
+  )
+}
 
 var sassCodeMirror = CodeMirror.fromTextArea(sassNode, {
   lineNumbers: true,
   mode: 'text/x-scss',
   tabSize: 2,
   autofocus: true,
-  theme: "monokai"
-});
+  theme: 'monokai'
+})
 
 var JSONCodeMirror = CodeMirror.fromTextArea(jsonNode, {
   lineNumbers: true,
-  mode: { name: "javascript", json: true }, 
+  mode: { name: 'javascript', json: true },
   tabSize: 2,
   readOnly: true,
-  theme: "monokai"
-});
+  theme: 'monokai'
+})
 
-convert();
+convert()
 
-sassCodeMirror.on('change', convert);
+sassCodeMirror.on('change', convert)

@@ -1,6 +1,7 @@
 SASS = node_modules/node-sass/bin/node-sass
 BROWSERIFY = node_modules/browserify/bin/cmd.js
 UGLIFY = node_modules/uglify-js/bin/uglifyjs
+STANDARD = node_modules/.bin/standard
 
 CSS += node_modules/normalize-css/normalize.css
 CSS += node_modules/codemirror/lib/codemirror.css
@@ -9,6 +10,9 @@ CSS += node_modules/codemirror/theme/monokai.css
 SCSS != find scss -name '*.scss'
 
 all: css/main.css js/main.js
+
+lint:
+	$(STANDARD) src/main.js
 
 pages: all
 	if [ ! -d $@ ]; then \

@@ -4,31 +4,27 @@
   "description": "SassDoc playground in the browser.",
   "homepage": "https://github.com/SassDoc/sassdocmeister",
   "bugs": "https://github.com/SassDoc/sassdocmeister/issues",
-
   "license": {
     "type": "Unlicense",
     "url": "http://unlicense.org/"
   },
-
   "author": "SassDoc team",
-
   "files": [
     "js/main.js",
     "css/main.css",
     "index.html"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/SassDoc/sassdocmeister.git"
   },
-
   "devDependencies": {
     "browserify": "^9.0.3",
     "codemirror": "^5.1.0",
     "node-sass": "^2.0.0",
     "normalize-css": "^2.3.1",
     "sassdoc": "^2.0.0",
+    "standard": "^8.6.0",
     "uglify-js": "^2.4.16"
   }
 }
